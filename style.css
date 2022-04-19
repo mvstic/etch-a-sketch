@@ -1,4 +1,21 @@
 body {
+    display:flex;
+    align-content:center;
+}
+
+.sidebar {
+    display:flex;
+    align-content:center;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.settings {
+    display:flex;
+    flex-direction:column;
+}
+
+.grid-container {
     box-sizing: border-box;
     margin: 0;
     min-height: 100vh;
@@ -12,4 +29,8 @@ body {
     display: grid;
     margin: 2rem;
     border: 2px solid black;
+}
+
+.reset {
+    
 }

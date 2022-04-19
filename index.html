@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="description"></div>
-    <button id="reset">Reset</button>
-    <div class="grid"></div>
-<script src="script.js"></script> 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch-a-sketch</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="header">
+                <h1>Etch-a-sketch</h1>
+            </div>
+            <div class="settings">
+                <div class="slider-container">
+                    <input type="range" min="1" max="100" value="0" class="slider" id="dimension">
+                </div>
+                <button id="rainbow">Rainbow</button>
+                <button id="grayscale">Grayscale</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid"></div>
+        </div>
+        <script src="script.js"></script> 
+    </body>
 </html>
