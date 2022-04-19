@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid");
 const resetButton = document.querySelector("#reset");
+const sizeSlider = document.querySelector("#size-slider");
 
 function getGridDimensions() {
     let dimension = prompt(`What size would you like your grid to be? Write down a single number between 1-100.`)
@@ -24,3 +25,10 @@ function createGrid(squares) {
     clearGrid();
     }
 }
+
+function updateGridDimensions(squares) {
+    sizeSlider.innerHTML = `${squares} x ${squares}`
+    createGrid(squares);
+  }
+
+sizeSlider.onmousemove = (e) => updateGridDimensions(e.target.value)
