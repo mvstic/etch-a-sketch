@@ -1,4 +1,4 @@
-const gridContainer = document.querySelector(".grid");
+const gridContainer = document.querySelector(".grid-container");
 const resetBtn = document.querySelector("#reset");
 const smallGrid = document.querySelector("#small-grid");
 const mediumGrid = document.querySelector("#medium-grid");
@@ -28,3 +28,4 @@ function createGrid(squares) {
     clearGrid();
     }
 }
+
