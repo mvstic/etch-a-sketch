@@ -19,6 +19,7 @@ function createGrid(squares) {
     }
 }
 
-function 
+createGrid(16)
+
 
 
