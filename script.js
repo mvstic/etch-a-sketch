@@ -35,14 +35,16 @@ function randomColor() {
     const r = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)
     const b = Math.floor(Math.random() * 255)
-    let rgb = `rgb(${r}, ${b}, ${g})`;
+    let rgb = `rgb(${r}, ${g}, ${b})`;
     console.log(rgb)
 }
 
-function changeColor(color) {
-    const eachSquare = document.querySelectorAll(".eachSquare");
+function changeColor() {
+    let eachSquare = document.querySelectorAll("div");
     eachSquare.addEventListener('mouseover', () => {
-        eachSquare.style.backgroundColor = color;
+        eachSquare.style.backgroundColor = randomColor();
     })
 }
+
+rainbowBtn.addEventListener('click', changeColor);
 
