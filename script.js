@@ -39,6 +39,7 @@ function randomColor() {
 rainbowBtn.addEventListener('click', () => {
     let squares = document.querySelectorAll(".eachSquare");
     squares.forEach(function(eachSquare) {
+        eachSquare.style.backgroundColor = "white";
         eachSquare.addEventListener('mouseover', () => {
             eachSquare.style.backgroundColor = randomColor();
         });
