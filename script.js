@@ -16,9 +16,6 @@ function createGrid(squares) {
         resetBtn.addEventListener('click', () => {
             eachSquare.style.backgroundColor = "white";
         })
-        rainbowBtn.addEventListener('click', () => {
-            eachSquare.style.backgroundColor = randomColor();
-        })
     }
 }
 
@@ -36,14 +33,14 @@ createGrid(16)
 
 function randomColor() {
     const r = Math.floor(Math.random() * 255)
-    const b = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)
-    let rbg = `(${r}, ${b}, ${g})`;
-    console.log(rbg)
+    const b = Math.floor(Math.random() * 255)
+    let rgb = `rgb(${r}, ${b}, ${g})`;
+    console.log(rgb)
 }
 
 function changeColor(color) {
-    let eachSquare = document.querySelectorAll(".eachSquare");
+    const eachSquare = document.querySelectorAll(".eachSquare");
     eachSquare.addEventListener('mouseover', () => {
         eachSquare.style.backgroundColor = color;
     })
