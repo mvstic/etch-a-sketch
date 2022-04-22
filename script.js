@@ -7,14 +7,14 @@ function createGrid(squares) {
     gridContainer.style.gridTemplateRows = `repeat(${squares}, 1fr)`;
     gridContainer.style.gridTemplateColumns = `repeat(${squares}, 1fr)`;
     for (let i = 0; i < squares * squares; i++) {
-        const eachSquare = document.createElement("div");
-        eachSquare.classList.add("eachSquare");
-        gridContainer.appendChild(eachSquare);
-        eachSquare.addEventListener('mouseover', () => {
-            eachSquare.style.backgroundColor = "black";
+        const square = document.createElement("div");
+        square.classList.add("square");
+        gridContainer.appendChild(square);
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = "black";
         });
         resetBtn.addEventListener('click', () => {
-            eachSquare.style.backgroundColor = "white";
+            square.style.backgroundColor = "white";
         });
     }
 }
@@ -37,11 +37,11 @@ function randomColor() {
 }
 
 rainbowBtn.addEventListener('click', () => {
-    let squares = document.querySelectorAll(".eachSquare");
-    squares.forEach(function(eachSquare) {
-        eachSquare.style.backgroundColor = "white";
-        eachSquare.addEventListener('mouseover', () => {
-            eachSquare.style.backgroundColor = randomColor();
+    let paint = document.querySelectorAll(".square");
+    paint.forEach((square) => {
+        square.style.backgroundColor = "white";
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = randomColor();
         });
     });
 });
