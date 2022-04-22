@@ -42,3 +42,10 @@ function randomColor() {
     console.log(rbg)
 }
 
+function changeColor(color) {
+    let eachSquare = document.querySelectorAll(".eachSquare");
+    eachSquare.addEventListener('mouseover', () => {
+        eachSquare.style.backgroundColor = color;
+    })
+}
+
