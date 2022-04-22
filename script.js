@@ -37,12 +37,6 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-function getGrayscale() {
-    for (let i=0; i < 1; i--) {
-
-    }
-}
-
 rainbowBtn.addEventListener('click', () => {
     let paint = document.querySelectorAll(".square");
     paint.forEach((square) => {
@@ -58,9 +52,10 @@ grayscaleBtn.addEventListener('click', () => {
     paint.forEach((square) => {
         square.style.backgroundColor = "white";
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = getGrayscale()
-        })
-    })
-})
+            square.style.backgroundColor = "black";
+            square.style.opacity = (parseFloat(square.style.opacity) || 0) + 0.1; 
+        });
+    });
+});
 
 createGrid(16);
