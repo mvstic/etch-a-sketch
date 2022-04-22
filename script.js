@@ -35,8 +35,7 @@ function randomColor() {
     const r = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)
     const b = Math.floor(Math.random() * 255)
-    let rgb = `rgb(${r}, ${g}, ${b})`;
-    console.log(rgb)
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 function changeColor() {
