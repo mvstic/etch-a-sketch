@@ -12,10 +12,10 @@ function createGrid(squares) {
         gridContainer.appendChild(eachSquare);
         eachSquare.addEventListener('mouseover', () => {
             eachSquare.style.backgroundColor = "black";
-        })
+        });
         resetBtn.addEventListener('click', () => {
             eachSquare.style.backgroundColor = "white";
-        })
+        });
     }
 }
 
@@ -29,8 +29,6 @@ slider.addEventListener('input', () => {
     createGrid(squares);
   });
 
-createGrid(16)
-
 function randomColor() {
     const r = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)
@@ -38,12 +36,11 @@ function randomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-function changeColor() {
-    let eachSquare = document.querySelectorAll("div");
-    eachSquare.addEventListener('mouseover', () => {
-        eachSquare.style.backgroundColor = randomColor();
-    })
-}
-
-rainbowBtn.addEventListener('click', changeColor);
-
+rainbowBtn.addEventListener('click', () => {
+    let squares = document.querySelectorAll(".eachSquare");
+    squares.forEach(function(eachSquare) {
+        eachSquare.addEventListener('mouseover', () => {
+            eachSquare.style.backgroundColor = randomColor();
+        });
+    });
+});
