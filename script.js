@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid-container");
 const resetBtn = document.querySelector("#reset");
+const rainbowBtn = document.querySelector("#rainbow");
 const slider = document.querySelector("#size-slider");
 
 function createGrid(squares) {
@@ -14,6 +15,9 @@ function createGrid(squares) {
         })
         resetBtn.addEventListener('click', () => {
             eachSquare.style.backgroundColor = "white";
+        })
+        rainbowBtn.addEventListener('click', () => {
+            eachSquare.style.backgroundColor = randomColor();
         })
     }
 }
@@ -30,6 +34,11 @@ slider.addEventListener('input', () => {
 
 createGrid(16)
 
-
-
+function randomColor() {
+    const r = Math.floor(Math.random() * 255)
+    const b = Math.floor(Math.random() * 255)
+    const g = Math.floor(Math.random() * 255)
+    let rbg = `(${r}, ${b}, ${g})`;
+    console.log(rbg)
+}
 
