@@ -44,3 +44,5 @@ rainbowBtn.addEventListener('click', () => {
         });
     });
 });
+
+createGrid(16);
