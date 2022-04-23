@@ -1,9 +1,9 @@
 const gridContainer = document.querySelector(".grid-container");
-const resetBtn = document.querySelector("#reset");
+const slider = document.querySelector("#size-slider");
 const rainbowBtn = document.querySelector("#rainbow");
 const grayscaleBtn = document.querySelector("#grayscale");
 const eraseBtn = document.querySelector("#erase");
-const slider = document.querySelector("#size-slider");
+const resetBtn = document.querySelector("#reset");
 
 function createGrid(squares) {
     gridContainer.style.gridTemplateRows = `repeat(${squares}, 1fr)`;
@@ -33,7 +33,7 @@ function getRandomColor() {
 }
 
 slider.addEventListener('input', () => {
-    let squares = parseInt(document.getElementById('size-slider').value);
+    let squares = parseInt(document.getElementById("size-slider").value);
     eraseGrid();
     createGrid(squares);
 });
