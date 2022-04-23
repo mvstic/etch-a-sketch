@@ -1,9 +1,14 @@
 const gridContainer = document.querySelector(".grid-container");
 const slider = document.querySelector("#size-slider");
+const blackBtn = document.querySelector("#black");
 const rainbowBtn = document.querySelector("#rainbow");
 const grayscaleBtn = document.querySelector("#grayscale");
 const eraseBtn = document.querySelector("#erase");
 const resetBtn = document.querySelector("#reset");
+const smallBtn = document.querySelector("#small");
+const mediumBtn = document.querySelector("#medium");
+const bigBtn = document.querySelector("#big");
+
 
 function createGrid(squares) {
     gridContainer.style.gridTemplateRows = `repeat(${squares}, 1fr)`;
@@ -32,10 +37,28 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
-slider.addEventListener('input', () => {
-    let squares = parseInt(document.getElementById("size-slider").value);
+smallBtn.addEventListener('click', () => {
     eraseGrid();
-    createGrid(squares);
+    createGrid(16);
+});
+
+mediumBtn.addEventListener('click', () => {
+    eraseGrid();
+    createGrid(32);
+});
+
+bigBtn.addEventListener('click', () => {
+    eraseGrid();
+    createGrid(48);
+});
+
+blackBtn.addEventListener('click', () => {
+    let paint = document.querySelectorAll(".square");
+    paint.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor = "black";
+        });
+    });
 });
 
 rainbowBtn.addEventListener('click', () => {
