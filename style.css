@@ -1,16 +1,35 @@
 body {
     display:flex;
     align-content:center;
+    background-color:lightgrey;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .sidebar {
     display:flex;
-    align-content:center;
     flex-direction:column;
+    align-content:center;
     justify-content:center;
 }
 
+.header {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+}
+
 .settings {
+    padding:2em;
+}
+
+.size-buttons {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.paint-options {
     display:flex;
     flex-direction:column;
 }
@@ -26,7 +45,28 @@ body {
     background-color:white;
 }
 
-
-.reset {
-    
+button {
+    background-color:black;
+    color:white;
+    font-family:inherit;
+    cursor:pointer;
+    min-width: 10ch;
+    padding:0.25em;
+    min-height: 45px;
+    transition: 225ms all ease-in-out;
 }
+
+button:hover {
+    opacity:40%;
+}
+
+button:focus {
+    background-color:grey;
+}
+
+#rainbow:focus {
+    background-image:linear-gradient(to right, red 0%, #fda085 20%, #f6d365 40%, green 60%, blue 80%, purple 100%);
+}
+
+
+
