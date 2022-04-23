@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    display:flex;
+    display:inline-flex;
     flex-direction:column;
     justify-content:center;
     align-content:center;
@@ -45,6 +45,14 @@ body {
     background-color:white;
 }
 
+.gridlines {
+    border: 0.5px solid rgba(20, 5, 85, 0.1);
+}
+
+.hidden {
+    display:none;
+}
+
 button {
     background-color:black;
     color:white;
@@ -67,6 +75,4 @@ button:focus {
 #rainbow:focus {
     background-image:linear-gradient(to right, red 0%, #fda085 20%, #f6d365 40%, green 60%, blue 80%, purple 100%);
 }
-
-
 

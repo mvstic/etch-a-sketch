@@ -8,6 +8,7 @@ const resetBtn = document.querySelector("#reset");
 const smallBtn = document.querySelector("#small");
 const mediumBtn = document.querySelector("#medium");
 const bigBtn = document.querySelector("#big");
+const gridBtn = document.querySelector("#grid");
 
 
 function createGrid(squares) {
@@ -88,5 +89,12 @@ eraseBtn.addEventListener('click', () => {
         });
     });
 });
+
+gridBtn.addEventListener('click', () => {
+    let grid = document.querySelectorAll(".square");
+    grid.forEach((square) => {
+        square.classList.toggle('gridlines');
+    })
+})
 
 createGrid(16);
