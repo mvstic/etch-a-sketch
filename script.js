@@ -58,6 +58,7 @@ blackBtn.addEventListener('click', () => {
     paint.forEach((square) => {
         square.addEventListener('mouseenter', () => {
             square.style.backgroundColor = "black";
+            square.style.opacity = 1;
         });
     });
 });
@@ -67,6 +68,7 @@ rainbowBtn.addEventListener('click', () => {
     paint.forEach((square) => {
         square.addEventListener('mouseenter', () => {
             square.style.backgroundColor = getRandomColor();
+            square.style.opacity = 1;
         });
     });
 });
@@ -85,7 +87,7 @@ eraseBtn.addEventListener('click', () => {
     let paint = document.querySelectorAll(".square");
     paint.forEach((square) => {
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = "white";
+            square.style.opacity = 0;
         });
     });
 });
