@@ -87,7 +87,7 @@ eraseBtn.addEventListener('click', () => {
     let paint = document.querySelectorAll(".square");
     paint.forEach((square) => {
         square.addEventListener('mouseenter', () => {
-            square.style.opacity = 0;
+            square.style.backgroundColor = "white";
         });
     });
 });
