@@ -73,6 +73,6 @@ button:focus {
 }
 
 #rainbow:focus {
-    background-image:linear-gradient(to right, red 0%, #fda085 20%, #f6d365 40%, green 60%, blue 80%, purple 100%);
+    background-image:linear-gradient(to right, red 0%, #fda085 20%, #f6d365 40%, green 60%, rgb(161, 161, 255) 80%, purple 100%);
 }
 

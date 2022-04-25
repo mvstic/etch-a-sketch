@@ -13,7 +13,7 @@ Built for Project Odin, this is a project demonstrating use of the DOM.
 
 ## Known Issues
 
-- ~The grayscale event listener applies to all button listeners in a way that affects the opacity of other paint modes.~ Fixed, but gridlines are now 1) erased by the eraser tool, and 2) affected by opacity when drawn over with grayscale. 
+- ~The grayscale event listener applies to all button listeners in a way that affects the opacity of other paint modes.~ Fixed, but gridlines are affected by opacity when drawn over with grayscale. 
 - Additionally, when grayscale paint is erased, grayscale no longer incrementally increases opacity.
 
 ## Skills
